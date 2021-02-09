@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>The Guessing Game</title>
+
+    <style>
+        html {
+            font-family: Arial;
+            background-color: darkblue;
+        }
+        
+        body {
+            width: 50%;
+            max-width: 1000px;
+            min-width: 500px;
+            margin: 0 auto;
+            color: white
+        }
+        
+        h1 {
+            color: red;
+        }
+        
+        #subGuess {
+            background: black;
+            color: gold;
+            border-color: gold;
+            border-width: 2mm;
+        }
+        
+        #resetGuess {
+            background: black;
+            color: red;
+            border-color: red;
+            border-width: 2mm;
+        }
+        
+        #guessField {
+            background: white;
+            color: black;
+            border-color: black;
+            border-width: 2mm;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <button><a href="../../index.html">Home</a></button>
+    <h1>Guess The Number</h1>
+
+    <p>Choose random number between 1 - 10.</p>
+
+    <div class="form">
+        <label for="guessField">Enter a guess: </label>
+        <input type="text" id="guessField" class="guessField">
+        <input type="submit" value="Submit guess" class="guessSubmit" id="subGuess">
+        <input type="reset" value="Reset guess" class="guessReset" id="resetGuess">
+    </div>
+    <script>
+        var y = Math.floor(Math.random() * 10 + 1);
+
+        var guess = 1;
+        document.getElementById("subGuess").onclick = function() {
+
+            var x = document.getElementById("guessField").value;
+
+            if (x == y) {
+                alert("CONGRATS!!! YOU GUESSED THE SECRET NUMBER: " +
+                    y + " YOU DID IT IN " + guess + " TRIES. Press the reset button to try again.");
+            } else if (x > y) {
+                guess++;
+                alert("NUMBER TOO BIG!! PICK A SMALLER NUMBER");
+            } else if (x < y) {
+                guess++;
+                alert("NUMBER TOO SMALL!! PICK A GREATER NUMBER");
+            } else {
+                guess++;
+                alert("PICK A NUMBER BETWEEN 1 AND 10");
+            };
+            console.log(x);
+        }
+        document.getElementById("resetGuess").onclick = function() {
+            location.reload()
+        }
+    </script>
+</body>
+
+</html>

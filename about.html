@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>About</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+            background-color: turquoise;
+            color: white;
+        }
+        
+        .navbar,
+        .jumbotron {
+            margin-bottom: 0;
+            border-radius: 0;
+            background-color: whitesmoke;
+            color: darkblue;
+        }
+        
+        .menu-item:hover {
+            background-color: blue;
+            color: blue;
+            font-weight: 800;
+        }
+        
+        .menu-item a.active {
+            background-color: red;
+        }
+        
+        footer {
+            background-color: #f2f2f2;
+            padding: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="portfolio.html">Portfolio</a>
+            </div>
+            <div class="nav navbar-nav navbar-right" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="menu-item"><a href=index.html>Home</a></li>
+                    <li class="menu-item"><a href=about.html>About</a></li>
+                    <li class="menu-item"><a href=contact.html>Contact</a></li>
+                    <li class="menu-item"><a href="#"><span class="glyphicon glyphicon-search"></span> Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron">
+        <div class="container text-center">
+            <h1>About</h1>
+            <p>About me</p>
+        </div>
+    </div>
+    <footer class="container-fluid text-center">
+        <p> "And in the end it's not the years in your life that count; it's the life in your years. ”</p>
+    </footer>
+
+</body>
+
+</html>
